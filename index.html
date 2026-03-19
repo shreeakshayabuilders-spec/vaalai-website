@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vaalai Promoters & Developers</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Poppins;
+  background:#0b132b;
+  color:white;
+}
+
+header{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.8)), url('planning.jpg');
+  background-size:cover;
+}
+
+header img{
+  width:130px;
+  margin-bottom:20px;
+}
+
+h1{
+  font-size:40px;
+}
+
+p{
+  font-size:18px;
+}
+
+.btn{
+  padding:12px 25px;
+  margin:10px;
+  border:none;
+  border-radius:30px;
+  background:gold;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.btn:hover{
+  background:white;
+}
+
+.stats{
+  background:#111827;
+  padding:40px;
+  text-align:center;
+  font-size:28px;
+  color:gold;
+}
+
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:#1f2937;
+  padding:20px;
+  border-radius:10px;
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png">
+  <h1>Vaalai Promoters & Developers</h1>
+  <p>Smart Planning. Legal Approval. Strong Foundations.</p>
+
+  <button class="btn" onclick="location.href='survey.html'">Digital Survey →</button>
+  <button class="btn" onclick="location.href='dtcp.html'">DTCP Approval →</button>
+  <button class="btn" onclick="location.href='planning.html'">Planning →</button>
+</header>
+
+<div class="stats">
+  10,000+ Happy Clients
+</div>
+
+<section>
+  <h2>Our Services</h2>
+
+  <div class="services">
+
+    <div class="card">
+      <img src="planning.jpg">
+      <h3>Digital Survey</h3>
+      <p>Accurate land measurement using modern digital tools.</p>
+    </div>
+
+    <div class="card">
+      <img src="dtcp.jpg">
+      <h3>DTCP Approval</h3>
+      <p>Complete legal approval and documentation support.</p>
+    </div>
+
+    <div class="card">
+      <img src="planning.jpg">
+      <h3>Planning</h3>
+      <p>Professional planning for homes and industries.</p>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
