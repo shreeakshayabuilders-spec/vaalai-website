@@ -14,15 +14,34 @@ button{padding:10px 20px;background:gold;border:none;}
 
 <h1>Planning Form</h1>
 
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="text" placeholder="Father Name" required>
-<input type="tel" placeholder="Phone Number" required>
-<input type="email" placeholder="Email" required>
+<form onsubmit="sendMail(event)">
+<input name="name" placeholder="Your Name" required>
+<input name="father_name" placeholder="Father Name" required>
+<input name="phone" placeholder="Phone Number" required>
+<input name="email" placeholder="Email" required>
+<textarea name="message"></textarea>
 
 <textarea rows="5" placeholder="Your Problem / Requirement"></textarea>
 
 <button type="submit">Submit</button>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("FF66PRCeZbkWWPigg");
+})();
+
+function sendMail(e){
+e.preventDefault();
+
+emailjs.sendForm("service_ty5zf9c","template_woflgfd",e.target)
+.then(function(){
+alert("Message Sent Successfully!");
+}, function(){
+alert("Failed to send");
+});
+}
+</script>
 </form>
 
 </body>
